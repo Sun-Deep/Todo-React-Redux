@@ -1,0 +1,8 @@
+.todo-list-card {
+  margin-top: 2rem;
+  background-color: rgba(155, 217, 251, 0.5);
+  height: 800px;
+  max-height: 800px;
+  overflow-y: scroll;
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+}
