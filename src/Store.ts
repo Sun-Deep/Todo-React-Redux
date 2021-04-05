@@ -10,7 +10,9 @@ const Store = createStore(
 );
 
 export interface RootStore {
-  todos: TodoType[] | [];
+  todos: {
+    todos: TodoType[] | [];
+  };
 }
 
 export default Store;

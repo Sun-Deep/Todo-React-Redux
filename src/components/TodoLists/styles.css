@@ -6,3 +6,38 @@
   overflow-y: scroll;
   box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
 }
+
+.todo-items {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-items small {
+  color: gray;
+}
+
+.todo-items button {
+  padding: 0.6rem 1rem;
+  margin: 0 0.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.todo-done {
+  background-color: #149f33;
+}
+
+.todo-delete {
+  background-color: #b61616;
+}
+
+button svg {
+  color: white;
+}
+
+.cut {
+  text-decoration: line-through;
+}

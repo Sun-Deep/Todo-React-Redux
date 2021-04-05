@@ -20,4 +20,14 @@ export interface FetchTodos {
   payload: TodoType[];
 }
 
-export type TodoDispatchTypes = AddTodo | FetchTodos;
+export interface DeleteTodo {
+  type: typeof DELETE_TODO;
+  payload: TodoType;
+}
+
+export interface ToggleTodo {
+  type: typeof UPDATE_TODO;
+  payload: TodoType;
+}
+
+export type TodoDispatchTypes = AddTodo | FetchTodos | DeleteTodo | ToggleTodo;

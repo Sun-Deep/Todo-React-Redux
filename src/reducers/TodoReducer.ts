@@ -1,7 +1,10 @@
 import {
+  ADD_TODO,
+  DELETE_TODO,
   FETCH_TODOS,
   TodoDispatchTypes,
   TodoType,
+  UPDATE_TODO,
 } from "../actions/TodoActionTypes";
 
 export interface DefaultTodoState {
@@ -21,6 +24,25 @@ export const todoReducer = (
       return {
         ...state,
         todos: action.payload,
+      };
+    case ADD_TODO:
+      return {
+        ...state,
+        todos: [...(state.todos || []), action.payload],
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todos: state.todos.filter(
+          (todo: TodoType) => todo._id !== action.payload._id
+        ),
+      };
+    case UPDATE_TODO:
+      return {
+        ...state,
+        todos: state.todos.map((todo: TodoType) =>
+          todo._id === action.payload._id ? action.payload : todo
+        ),
       };
     default:
       return state;
